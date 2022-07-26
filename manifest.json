@@ -1,0 +1,17 @@
+{
+    "name": "EwsgitOS Web Extension",
+    "description": "The EwsgitOS website customizations",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "author": "Ewsgit",
+    "permissions": [
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "content_scripts": [{
+        "matches": ["https://*.youtube.com/*"],
+        "css": ["./youtube.com/index.css"]
+    }]
+}
