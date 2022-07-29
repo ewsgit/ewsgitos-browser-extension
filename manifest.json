@@ -8,10 +8,19 @@
         "activeTab"
     ],
     "host_permissions": [
-        "https://*.youtube.com/*"
+        "https://*.youtube.com/*",
+        "https://*.searx.be/*"
     ],
     "content_scripts": [{
         "matches": ["https://*.youtube.com/*"],
-        "css": ["./youtube.com/index.css"]
+        "css": ["./youtube.com/all.css"]
+    },
+    {
+        "matches": ["https://searx.be/"],
+        "css": ["./searx.be/index.css"]
+    },
+    {
+        "matches": ["https://searx.be/search"],
+        "css": ["./searx.be/search.css"]
     }]
 }

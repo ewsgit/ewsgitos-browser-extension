@@ -55,10 +55,28 @@ ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-but
     margin-top: 0.5rem !important;
 }
 
-yt-icon-button.ytd-masthead {
+yt-icon-button {
     border-radius: 0.5rem !important;
+    transition: background-color 125ms;
+    cursor: pointer;
 }
 
-yt-icon-button.ytd-masthead:hover {
-    background-color: var(-yt-spec-) !important;
+yt-icon-button:hover {
+    background-color: var(--yt-spec-general-background-a) !important;
+}
+
+yt-icon-button > yt-interaction {
+    display: none !important;
+}
+
+ytd-thumbnail {
+    border-radius: 1rem !important;
+    overflow: hidden !important;
+    transition: all 0.5s;
+}
+
+ytd-thumbnail-overlay-time-status-renderer {
+    margin: 1rem !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
 }

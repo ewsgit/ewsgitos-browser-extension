@@ -1,0 +1,20 @@
+#search_logo {
+    display: none !important;
+}
+
+.category input[type=checkbox]:checked+label {
+    border-bottom: none !important;
+    background-color: var(--color-categories-item-border-selected) !important;
+    border-radius: 0.5rem !important;
+    color: #fff !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.search_categories {
+    padding-bottom: 0.5rem !important;
+}
+
+#results #sidebar :first-child, #results #urls :first-child {
+    padding-bottom: 0.25rem !important;
+}
