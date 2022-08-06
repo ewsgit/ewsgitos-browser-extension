@@ -1,19 +1,49 @@
-iron-selector > * {
-    border-radius: 0 !important;
+/*
+ *   Copyright (c) 2022 Ewsgit
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+
+iron-selector>* {
     border: none !important;
     margin: 0 !important;
     border-radius: 0.5rem !important;
 }
 
-yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT], yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER], yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP] {
-    background-color: #0000 !important;
+yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT],
+yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER],
+yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP] {
+    background-color: transparent !important;
 }
 
-yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT][selected], yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER][selected] {
+yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT][selected],
+yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER][selected] {
     background-color: var(--yt-spec-text-primary) !important;
 }
 
-yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT]:not([selected]):hover, yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER]:not([selected]):hover, yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP]:not([selected]):hover, yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT]:not([selected]):focus, yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER]:not([selected]):focus, yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP]:not([selected]):focus {
+yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT]:not([selected]):hover,
+yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER]:not([selected]):hover,
+yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP]:not([selected]):hover,
+yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT]:not([selected]):focus,
+yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER]:not([selected]):focus,
+yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP]:not([selected]):focus {
     background-color: var(--yt-spec-button-chip-background-hover) !important;
 }
 
@@ -35,7 +65,9 @@ iron-selector {
     width: 100% !important;
 }
 
-yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT], yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER], yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP] {
+yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT],
+yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER],
+yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP] {
     transition: background-color 125ms !important;
 }
 
@@ -44,11 +76,11 @@ ytd-button-renderer #button.ytd-button-renderer {
 }
 
 ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-button-renderer {
-    border: 0.25rem solid var(--yt-spec-call-to-action) !important;
+    border: 1rem solid var(--yt-spec-call-to-action) !important;
 }
 
 #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
-    border: none !important;
+    border: 0 !important;
 }
 
 #contents.ytd-rich-grid-renderer {
@@ -56,16 +88,16 @@ ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-but
 }
 
 yt-icon-button {
-    border-radius: 0.5rem !important;
-    transition: background-color 125ms;
-    cursor: pointer;
+    border-radius: 1rem !important;
+    transition: background-color 125ms !important;
+    cursor: pointer !important;
 }
 
 yt-icon-button:hover {
     background-color: var(--yt-spec-general-background-a) !important;
 }
 
-yt-icon-button > yt-interaction {
+yt-icon-button>yt-interaction {
     display: none !important;
 }
 
@@ -79,4 +111,44 @@ ytd-thumbnail-overlay-time-status-renderer {
     margin: 1rem !important;
     border-radius: 0.5rem !important;
     padding: 0.5rem !important;
+}
+
+#avatar.ytd-rich-grid-media {
+    border-radius: 0.5rem !important;
+}
+
+yt-img-shadow.ytd-topbar-menu-button-renderer,
+#avatar.ytd-rich-grid-media {
+    border-radius: 1rem !important;
+}
+
+#voice-search-button.ytd-masthead {
+    border-radius: 0 1rem 1rem 0 !important;
+    margin-left: 0 !important;
+}
+
+#buttons.ytd-masthead>*.ytd-masthead:not(:last-child) {
+    margin-right: 0.25rem !important;
+}
+
+ytd-mini-guide-renderer {
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+ytd-mini-guide-renderer>#items>* {
+    transition: background-color 125ms !important;
+}
+
+ytd-mini-guide-renderer>#items>*:first-child {
+    border-radius: 0 1rem 0 0 !important;
+}
+
+ytd-mini-guide-renderer>#items>*:last-child {
+    border-radius: 0 0 1rem 0 !important;
+}
+
+#chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+    background-color: transparent !important;
 }
