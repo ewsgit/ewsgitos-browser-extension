@@ -9,18 +9,50 @@
     ],
     "host_permissions": [
         "https://*.youtube.com/*",
-        "https://*.searx.be/*"
+        "https://*.searx.be/*",
+        "https://*.google.com/*"
     ],
-    "content_scripts": [{
-        "matches": ["https://*.youtube.com/*"],
-        "css": ["./youtube.com/all.css"]
-    },
-    {
-        "matches": ["https://searx.be/"],
-        "css": ["./searx.be/index.css"]
-    },
-    {
-        "matches": ["https://searx.be/search"],
-        "css": ["./searx.be/search.css"]
-    }]
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "css": [
+                "./youtube.com/all.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://searx.be/"
+            ],
+            "css": [
+                "./searx.be/index.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://searx.be/search"
+            ],
+            "css": [
+                "./searx.be/search.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.google.com/*",
+                "https://www.google.co.uk",
+                "https://www.google.ge",
+                "https://www.google.ca",
+                "https://www.google.de",
+                "https://www.google.fr",
+                "https://www.google.es",
+                "https://www.google.be",
+                "https://www.google.",
+                "https://www.google.fr",
+            ],
+            "css": [
+                "./google.com/index.css"
+            ]
+        }
+    ]
 }

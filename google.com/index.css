@@ -21,23 +21,20 @@
  *   SOFTWARE.
  */
 
-#search_logo {
-    display: none !important;
+.gb_Ba {
+  border-radius: 0.5rem !important;
 }
 
-.category input[type=checkbox]:checked+label {
-    border-bottom: none !important;
-    background-color: var(--color-categories-item-border-selected) !important;
-    border-radius: 0.5rem !important;
-    color: #fff !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+.JZFjpd {
+  border-radius: 1rem !important;
 }
 
-.search_categories {
-    padding-bottom: 0.5rem !important;
+.gb_Se button svg,
+.gb_A {
+  border-radius: 0.5rem !important;
 }
 
-#results #sidebar :first-child, #results #urls :first-child {
-    padding-bottom: 0.25rem !important;
+.uU7dJb {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
