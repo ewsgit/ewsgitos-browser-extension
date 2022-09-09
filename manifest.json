@@ -40,15 +40,14 @@
         {
             "matches": [
                 "https://www.google.com/*",
-                "https://www.google.co.uk",
-                "https://www.google.ge",
-                "https://www.google.ca",
-                "https://www.google.de",
-                "https://www.google.fr",
-                "https://www.google.es",
-                "https://www.google.be",
-                "https://www.google.",
-                "https://www.google.fr",
+                "https://www.google.co.uk/*",
+                "https://www.google.ge/*",
+                "https://www.google.ca/*",
+                "https://www.google.de/*",
+                "https://www.google.fr/*",
+                "https://www.google.es/*",
+                "https://www.google.be/*",
+                "https://www.google.fr/*"
             ],
             "css": [
                 "./google.com/index.css"
