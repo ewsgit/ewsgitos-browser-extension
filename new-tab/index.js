@@ -1,1 +1,2 @@
-console.log("New tab page needs implementing...")
+"use strict";
+console.log("New tab page needs implementing...");

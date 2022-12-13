@@ -1,57 +1,53 @@
 {
-    "name": "EwsgitOS Web Extension",
-    "description": "The EwsgitOS website customizations",
-    "version": "0.0.1",
-    "manifest_version": 3,
-    "author": "Ewsgit",
-    "permissions": [
-        "activeTab"
-    ],
-    "host_permissions": [
-        "https://*.youtube.com/*",
-        "https://*.searx.be/*",
-        "https://*.google.com/*"
-    ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*.youtube.com/*"
-            ],
-            "css": [
-                "./youtube.com/all.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://searx.be/"
-            ],
-            "css": [
-                "./searx.be/index.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://searx.be/search"
-            ],
-            "css": [
-                "./searx.be/search.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://www.google.com/*",
-                "https://www.google.co.uk/*",
-                "https://www.google.ge/*",
-                "https://www.google.ca/*",
-                "https://www.google.de/*",
-                "https://www.google.fr/*",
-                "https://www.google.es/*",
-                "https://www.google.be/*",
-                "https://www.google.fr/*"
-            ],
-            "css": [
-                "./google.com/index.css"
-            ]
-        }
+  "name": "EwsgitOS Web Extension",
+  "description": "The EwsgitOS website customizations",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "author": "Ewsgit",
+  "permissions": ["activeTab", "storage", "scripting", "declarativeNetRequest"],
+  "host_permissions": ["https://*/*", "http://*/*", "declarativeNetRequest"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "css": ["./youtube.com/all.css"]
+    },
+    {
+      "matches": ["https://searx.be/"],
+      "css": ["./searx.be/index.css"]
+    },
+    {
+      "matches": ["https://searx.be/search"],
+      "css": ["./searx.be/search.css"]
+    },
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "https://www.google.co.uk/*",
+        "https://www.google.ge/*",
+        "https://www.google.ca/*",
+        "https://www.google.de/*",
+        "https://www.google.fr/*",
+        "https://www.google.es/*",
+        "https://www.google.be/*",
+        "https://www.google.fr/*"
+      ],
+      "css": ["./google.com/index.css"]
+    },
+    {
+      "matches": ["https://www.sparxmaths.uk/student"],
+      "js": ["./sparxmaths.uk/bookwork.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "core/background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "stop_it_sparx",
+        "enabled": true,
+        "path": "sparxmaths.uk/block_rules.json"
+      }
     ]
+  }
 }
