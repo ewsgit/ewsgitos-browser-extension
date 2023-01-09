@@ -1,0 +1,60 @@
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54
+  > div {
+  border-radius: 0.5rem;
+  filter: blur(1rem);
+  margin: 0;
+  transition: filter 500ms ease-in-out;
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54
+  > div:hover {
+  filter: blur(0rem);
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54 {
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  border: 0.25rem #565656 solid;
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54::before {
+  content: "no peaking";
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.125rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54:hover::before {
+  opacity: 0;
+}
+
+#O365_MainLink_Help_container {
+  display: none;
+}

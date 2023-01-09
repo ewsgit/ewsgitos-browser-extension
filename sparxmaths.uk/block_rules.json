@@ -11,5 +11,18 @@
     "condition": {
       "urlFilter": "https://interaction.api.sparxmaths.uk/*"
     }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block",
+      "redirect": {
+        "transform": { "scheme": "https", "host": "example.com" }
+      }
+    },
+    "condition": {
+      "urlFilter": "https://client-metrics.api.sparxmaths.uk"
+    }
   }
 ]

@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "author": "Ewsgit",
   "permissions": ["activeTab", "storage", "scripting", "declarativeNetRequest"],
-  "host_permissions": ["https://*/*", "http://*/*", "declarativeNetRequest"],
+  "host_permissions": ["https://*/*", "http://*/*"],
   "content_scripts": [
     {
       "matches": ["https://*.youtube.com/*"],
@@ -20,31 +20,38 @@
       "css": ["./searx.be/search.css"]
     },
     {
-      "matches": [
-        "https://www.google.com/*",
-        "https://www.google.co.uk/*",
-        "https://www.google.ge/*",
-        "https://www.google.ca/*",
-        "https://www.google.de/*",
-        "https://www.google.fr/*",
-        "https://www.google.es/*",
-        "https://www.google.be/*",
-        "https://www.google.fr/*"
-      ],
-      "css": ["./google.com/index.css"]
+      "matches": ["https://www.google.com/*", "https://www.google.co.uk/*"],
+      "css": ["./google.com/all.css"]
     },
     {
       "matches": ["https://www.sparxmaths.uk/student"],
       "js": ["./sparxmaths.uk/bookwork.js"]
+    },
+    {
+      "matches": ["https://twitter.com/*"],
+      "css": ["./twitter.com/all.css"]
+    },
+    {
+      "matches": ["https://manchesterworld.uk/*"],
+      "css": ["./manchesterworld.uk/all.css"]
+    },
+    {
+      "matches": ["https://drafts.csswg.org/*"],
+      "css": ["./csswg.org/drafts.css"]
+    },
+    {
+      "matches": ["https://*.sharepoint.com/*"],
+      "css": ["./sharepoint.com/all.css"]
     }
   ],
   "background": {
-    "service_worker": "core/background.js"
+    "service_worker": "./background.js",
+    "type": "module"
   },
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "stop_it_sparx",
+        "id": "depressing-sparxmath",
         "enabled": true,
         "path": "sparxmaths.uk/block_rules.json"
       }
