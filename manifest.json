@@ -42,6 +42,10 @@
     {
       "matches": ["https://*.sharepoint.com/*"],
       "css": ["./sharepoint.com/all.css"]
+    },
+    {
+      "matches": ["https://*.twitch.tv/*"],
+      "css": ["./twitch.tv/all.css"]
     }
   ],
   "background": {
