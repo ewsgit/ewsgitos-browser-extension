@@ -2,36 +2,59 @@
   remove the atrocity that is the sparxmaths bookwork check
 */
 
-document.body.style.background = "red";
+function main() {
+    console.log(`EwsgitOS: sparxmaths hooked`)
 
-// implement this's calculations: https://www.triangle-calculator.com/?what=sas&a=7.5&a1=76&b=8.6&submit=Solve
+    MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
-/*
-WAC / WACED Prompt (book code) converted to yaml after being de-obfuscated (the correct answer was c)
+    let questionData = {
+        bookworkCode: "", question: "", answer: ""
+    }
 
-activityIndex: 1
-activityType: WAC
-wac:
-  bookworkCode: M38
-  taskItem:
-    packageID: 0bfa2e56-080e-4bdd-a5d4-bb0acb11ff47
-    taskIndex: 2
-    taskItemIndex: 3
-  options:
-    - wacedAnswer:
-        components:
-          - key: oI
-            value: true
-      filledAnswerTemplate: <steps><answer><part><choice>B</choice></part></answer></steps>
-    - wacedAnswer:
-        components:
-          - key: iH
-            value: C
-        hash: C
-      filledAnswerTemplate: <steps><answer><part><choice>C</choice></part></answer></steps>
-    - wacedAnswer:
-        components:
-          - key: iU
-            value: true
-      filledAnswerTemplate: <steps><answer><part><choice>A</choice></part></answer></steps>
-*/
+    let previousAnswers = []
+
+    new MutationObserver((mutations, observer) => {
+
+        let middle = document.querySelectorAll("#top-bar > div")[0]
+
+        if (!middle) return
+
+        if (document.querySelectorAll(`#skill-delivery-answer-button`)[0]) {
+            document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
+                setTimeout(() => {
+                    if (!document.getElementById(`skill-delivery-submit-button`)) return console.log("unable to detect the submit button")
+                    document.getElementById(`skill-delivery-submit-button`).onclick = () => {
+                        questionData.answer = document.querySelectorAll(`.page.answer-only`)[0].innerHTML
+                        previousAnswers.push({ code: middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", ""), data: document.querySelectorAll(`.page.answer-only`)[0].innerHTML})
+                        console.table(previousAnswers)
+                    }
+                }, 1000)
+            }
+        }
+
+        document.querySelectorAll(`#status-bar > div.back-button`)[0].onclick = () => {
+            questionData = {
+                bookworkCode: "", question: "", answer: ""
+            }
+        }
+
+        if (middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "") === questionData.bookworkCode) return
+
+
+        questionData.bookworkCode = middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")
+
+        middle.children[1].innerHTML = `<img class="calculator-image" src="./img/calculator_allowed_scaled.svg" alt="Calculator Allowed">
+                                          <span class="calculator-text">
+                                            <span>Calculator</span>
+                                            <span>
+                                                <strong>allowed</strong>
+                                            </span>
+                                          </span>
+                                        </div>`
+
+        questionData.question = document.querySelectorAll(`#app-container > div.screen > div.main-view > div > div > div > div.skill-delivery-view > div.view-body > div > div > div > div > div`)[0]
+
+    }).observe(document.getElementById("app-container"), {subtree: true, childList: true})
+}
+
+main()
