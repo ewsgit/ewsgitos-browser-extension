@@ -25,7 +25,7 @@ function main() {
                     if (!document.getElementById(`skill-delivery-submit-button`)) return console.log("unable to detect the submit button")
                     document.getElementById(`skill-delivery-submit-button`).onclick = () => {
                         questionData.answer = document.querySelectorAll(`.page.answer-only`)[0].innerHTML
-                        previousAnswers.push({ code: middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", ""), data: document.querySelectorAll(`.page.answer-only`)[0].innerHTML})
+                        previousAnswers.push({ code: middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", ""), answer: document.querySelectorAll(`.page.answer-only`)[0].innerHTML})
                         console.table(previousAnswers)
                     }
                 }, 1000)
@@ -40,7 +40,6 @@ function main() {
 
         if (middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "") === questionData.bookworkCode) return
 
-
         questionData.bookworkCode = middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")
 
         middle.children[1].innerHTML = `<img class="calculator-image" src="./img/calculator_allowed_scaled.svg" alt="Calculator Allowed">
@@ -54,6 +53,8 @@ function main() {
 
         questionData.question = document.querySelectorAll(`#app-container > div.screen > div.main-view > div > div > div > div.skill-delivery-view > div.view-body > div > div > div > div > div`)[0]
 
+        console.log(questionData)
+      
     }).observe(document.getElementById("app-container"), {subtree: true, childList: true})
 }
 
