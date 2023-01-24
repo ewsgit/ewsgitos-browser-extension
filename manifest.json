@@ -46,6 +46,10 @@
     {
       "matches": ["https://*.twitch.tv/*"],
       "css": ["./twitch.tv/all.css"]
+    },
+    {
+      "matches": ["https://*.office.com/*"],
+      "css": ["./office.com/index.css"]
     }
   ],
   "background": {

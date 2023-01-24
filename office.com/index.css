@@ -1,0 +1,27 @@
+	#feedbackContainer {
+		display: none;
+	}
+
+	#officeHome > div:nth-child(1) > ohp-appbar > ohp-appbar-content > div > div > div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	#officeHome > div:nth-child(1) > ohp-appbar > ohp-appbar-content > div > div > div > div.___iz6fzo0.f22iagw.f122n59.f1vx9l62.fqerorx.f1i5mqs4 {
+		display: none;
+	}
+
+	.ohpAppTheme .ms-bgc-nla, .ohpAppTheme .ms-bgc-d {
+		background-color: var(--colorNeutralBackground2,#fafafa);
+	}
+
+	#officeHome > div:nth-child(1) > ohp-appbar > ohp-appbar-content > div > div > div > div.___zeg2ds0.f22iagw.f122n59.fsuw20m.f1vx9l62.f540s0x.f1ja72i3 {
+		background-color: var(--colorNeutralBackground3);
+		border-radius: var(--borderRadiusXLarge);
+	}
+
+	.f1ctqxl6 {
+		background-color: var(--colorNeutralBackground2) !important;
+	}
