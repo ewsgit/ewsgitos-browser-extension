@@ -1,0 +1,21 @@
+#status-bar > div.location > span {
+    width: 0 !important;
+    overflow: hidden !important;
+    flex: unset;
+}
+
+.package-filter-list {
+    padding: 0.25rem !important;
+}
+
+.package-filter.btn-menu-item {
+    margin-bottom: 0.25rem !important;
+}
+
+.status-bar-menu-button {
+    border: none !important;
+    border-radius: 0.5rem !important;
+    align-self: unset !important;
+    padding: 0.25rem 1rem !important;
+    margin-right: 0.5rem !important;
+}

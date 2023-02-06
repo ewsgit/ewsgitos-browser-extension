@@ -1,0 +1,31 @@
+#lightbox {
+    border-radius: 1rem !important;
+    padding: 2.5rem 2.5rem 0;
+}
+
+.row.tile .table {
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.row.tile .tile-menu-float {
+    top: 50% !important;
+    position: absolute !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+}
+
+.row.tile {
+    margin-left: -22px !important;
+    margin-right: -22px !important;
+    border-radius: 0.5rem !important;
+    transition: 100ms ease-in-out all;
+}
+
+#footerLinks {
+    padding-left: 0.5rem;
+}
+
+#footerLinks::before {
+    content: "Extended by EwsgitOS";
+}

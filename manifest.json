@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "manifest_version": 3,
   "author": "Ewsgit",
-  "permissions": ["activeTab", "scripting", "declarativeNetRequest", "contextMenus", "bookmarks", "tabs", "storage"],
+  "permissions": ["activeTab", "storage", "scripting", "declarativeNetRequest"],
   "host_permissions": ["https://*/*", "http://*/*"],
   "content_scripts": [
     {
@@ -24,16 +24,13 @@
       "css": ["./google.com/all.css"]
     },
     {
-      "matches": ["https://*.sparxmaths.uk/student"],
-      "js": ["./sparxmaths.uk/bookwork.js"]
+      "matches": ["https://www.sparxmaths.uk/student"],
+      "js": ["./sparxmaths.uk/bookwork.js"],
+      "css": ["./sparxmaths.uk/student.css"]
     },
     {
-      "matches": ["https://*.sparxmaths.uk/oauth2/*"],
-      "css": ["./sparxmaths.uk/oauth.css"]
-    },
-    {
-      "matches": ["https://*.sparxmaths.com/"],
-      "js": ["./sparxmaths.com/redirect.js"]
+      "matches": ["https://auth.sparxmaths.uk/*"],
+      "css": ["./sparxmaths.uk/auth.css"]
     },
     {
       "matches": ["https://twitter.com/*"],
@@ -56,8 +53,8 @@
       "css": ["./twitch.tv/all.css"]
     },
     {
-      "matches": ["https://*.office.com/*"],
-      "css": ["./office.com/index.css"]
+      "matches": ["https://login.microsoftonline.com/*"],
+      "css": ["./microsoftonline.com/login.css"]
     }
   ],
   "background": {
