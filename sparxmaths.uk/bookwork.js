@@ -11,7 +11,7 @@ function main() {
     }
 
     chrome.storage.local.get("sparx").then(data => {
-        let previousAnswers = data.sparx.sparxPreviousAnswers || {}
+        let previousAnswers = data?.sparx?.sparxPreviousAnswers || {}
 
         console.log(data)
 

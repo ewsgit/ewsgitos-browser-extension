@@ -1,6 +1,7 @@
 #lightbox {
     border-radius: 1rem !important;
-    padding: 2.5rem 2.5rem 0;
+    padding: 2.5rem 2.5rem 0.5rem;
+    min-height: unset !important;
 }
 
 .row.tile .table {
@@ -16,8 +17,8 @@
 }
 
 .row.tile {
-    margin-left: -22px !important;
-    margin-right: -22px !important;
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
     border-radius: 0.5rem !important;
     transition: 100ms ease-in-out all;
 }
@@ -28,4 +29,8 @@
 
 #footerLinks::before {
     content: "Extended by EwsgitOS";
+}
+
+#tilesHolder > div.tile-container > div > div.table > div > div.table-cell.text-left.content > div > small {
+    padding-right: 0.75rem;
 }
