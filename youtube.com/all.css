@@ -136,6 +136,13 @@ ytd-mini-guide-renderer {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 7.5rem !important;
+}
+
+ytd-mini-guide-entry-renderer[guide-refresh] a.ytd-mini-guide-entry-renderer {
+    width: 7.5rem !important;
 }
 
 ytd-mini-guide-renderer > #items > * {
@@ -176,4 +183,27 @@ ytd-mini-guide-renderer > #items > *:last-child {
 
 #sections > ytd-guide-section-renderer:nth-child(4) {
     display: none !important;
+}
+
+#search-icon-legacy {
+    border-radius: 0 !important;
+}
+
+#search {
+    padding-right: 0 !important;
+}
+
+#search > #search-form > #container {
+    border-bottom-left-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+}
+
+ytd-searchbox.ytd-masthead {
+    padding: 0 !important;
+}
+
+ytd-rich-item-renderer {
+    margin-left: calc(var(--ytd-rich-grid-item-margin) / 4) !important;
+    margin-right: calc(var(--ytd-rich-grid-item-margin) / 4) !important;
+    margin-bottom: 0rem;
 }
