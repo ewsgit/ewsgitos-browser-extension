@@ -216,3 +216,7 @@ body
   > div.erkvQe {
   padding-bottom: 0;
 }
+
+#gb > div > div:nth-child(3) {
+  display: none;
+}
