@@ -220,3 +220,7 @@ body
 #gb > div > div:nth-child(3) {
   display: none;
 }
+
+#xe7COe, #gbwa {
+  display: none !important;
+}
