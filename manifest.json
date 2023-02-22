@@ -25,12 +25,7 @@
     },
     {
       "matches": ["https://www.sparxmaths.uk/student"],
-      "js": ["./sparxmaths.uk/bookwork.js"],
-      "css": ["./sparxmaths.uk/student.css"]
-    },
-    {
-      "matches": ["https://auth.sparxmaths.uk/*"],
-      "css": ["./sparxmaths.uk/auth.css"]
+      "js": ["./sparxmaths.uk/bookwork.js"]
     },
     {
       "matches": ["https://twitter.com/*"],
@@ -53,8 +48,8 @@
       "css": ["./twitch.tv/all.css"]
     },
     {
-      "matches": ["https://login.microsoftonline.com/*"],
-      "css": ["./microsoftonline.com/login.css"]
+      "matches": ["https://*.office.com/*"],
+      "css": ["./office.com/index.css"]
     }
   ],
   "background": {
@@ -67,6 +62,11 @@
         "id": "depressing-sparxmath",
         "enabled": true,
         "path": "sparxmaths.uk/block_rules.json"
+      },
+      {
+        "id": "youtube-com",
+        "enabled": true,
+        "path": "youtube.com/block_rules.json"
       }
     ]
   }

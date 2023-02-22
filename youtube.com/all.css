@@ -21,7 +21,7 @@
  *   SOFTWARE.
  */
 
-iron-selector > * {
+iron-selector>* {
     border: none !important;
     margin: 0 !important;
     border-radius: 0.5rem !important;
@@ -97,7 +97,7 @@ yt-icon-button:hover {
     background-color: var(--yt-spec-general-background-a) !important;
 }
 
-yt-icon-button > yt-interaction {
+yt-icon-button>yt-interaction {
     display: none !important;
 }
 
@@ -127,7 +127,7 @@ yt-img-shadow.ytd-topbar-menu-button-renderer,
     margin-left: 0 !important;
 }
 
-#buttons.ytd-masthead > *.ytd-masthead:not(:last-child) {
+#buttons.ytd-masthead>*.ytd-masthead:not(:last-child) {
     margin-right: 0.25rem !important;
 }
 
@@ -136,74 +136,19 @@ ytd-mini-guide-renderer {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 7.5rem !important;
 }
-
-ytd-mini-guide-entry-renderer[guide-refresh] a.ytd-mini-guide-entry-renderer {
-    width: 7.5rem !important;
-}
-
-ytd-mini-guide-renderer > #items > * {
+ytd-mini-guide-renderer>#items>* {
     transition: background-color 125ms !important;
-    border-radius: 0 !important;
-    background-color: #56565644;
 }
 
-ytd-mini-guide-renderer > #items > *:first-child {
+ytd-mini-guide-renderer>#items>*:first-child {
     border-radius: 0 1rem 0 0 !important;
 }
 
-ytd-mini-guide-renderer > #items > *:last-child {
+ytd-mini-guide-renderer>#items>*:last-child {
     border-radius: 0 0 1rem 0 !important;
 }
 
-.yt-spec-button-shape-next--size-m {
-    border-radius: 1rem !important;
-}
-
-#items > ytd-guide-collapsible-section-entry-renderer,
-#sections > ytd-guide-section-renderer {
-    border-top: none !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    margin-bottom: 0 !important;
-    border-bottom: none !important;
-}
-
-#footer {
-    display: none !important;
-}
-
-#sections > ytd-guide-section-renderer:nth-child(5) > #items > ytd-guide-entry-renderer:nth-child(3),
-#sections > ytd-guide-section-renderer:nth-child(5) > #items > ytd-guide-entry-renderer:nth-child(4) {
-    display: none !important;
-}
-
-#sections > ytd-guide-section-renderer:nth-child(4) {
-    display: none !important;
-}
-
-#search-icon-legacy {
-    border-radius: 0 !important;
-}
-
-#search {
-    padding-right: 0 !important;
-}
-
-#search > #search-form > #container {
-    border-bottom-left-radius: 1rem !important;
-    border-top-left-radius: 1rem !important;
-}
-
-ytd-searchbox.ytd-masthead {
-    padding: 0 !important;
-}
-
-ytd-rich-item-renderer {
-    margin-left: calc(var(--ytd-rich-grid-item-margin) / 4) !important;
-    margin-right: calc(var(--ytd-rich-grid-item-margin) / 4) !important;
-    margin-bottom: 0rem;
+#chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+    background-color: transparent !important;
 }

@@ -52,9 +52,26 @@
   > div
   > div
   > div.minimisedProfile_93c78e54:hover::before {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 #O365_MainLink_Help_container {
-  display: none;
+  display: none !important;
+}
+
+#O365_MainLink_MePhoto > div > div > div > div > div.nvEhuDKzSmREBsqaIaOhu > img {
+  display: none !important;
+}
+
+#mectrl_headerPicture {
+  background-image: url("https://api.macosicons.com/uploads/filters_24px_ef8beca8c2.svg") !important;
+}
+
+#mectrl_currentAccount_picture,
+.mectrl_profilepic {
+  border-radius: 1rem !important;
+}
+
+#mectrl_currentAccount_picture > div {
+  filter: blur(0.75rem);
 }
