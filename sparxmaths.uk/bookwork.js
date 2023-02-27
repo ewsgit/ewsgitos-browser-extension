@@ -5,6 +5,8 @@
 function main() {
     console.log(`EwsgitOS: sparxmaths hooked`)
 
+    if (!document.getElementById("app-container")) setTimeout(() => main(), 1000)
+
     MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
     let questionData = {
@@ -48,6 +50,8 @@ function main() {
                 bookworkCode: "", question: "", answer: ""
             }
         }
+
+        if(document.getElementById("#answer-wac-box")) return console.log("wac")
 
         if (middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "") === questionData.bookworkCode) return
 

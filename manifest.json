@@ -25,7 +25,8 @@
     },
     {
       "matches": ["https://www.sparxmaths.uk/student"],
-      "js": ["./sparxmaths.uk/bookwork.js"]
+      "js": ["./sparxmaths.uk/bookwork.js"],
+      "css": ["./sparxmaths.uk/student.css"]
     },
     {
       "matches": ["https://twitter.com/*"],
@@ -50,6 +51,14 @@
     {
       "matches": ["https://*.office.com/*"],
       "css": ["./office.com/index.css"]
+    },
+    {
+      "matches": ["https://login.microsoftonline.com/*"],
+      "css": ["./microsoftonline.com/login.css"]
+    },
+    {
+      "matches": ["https://myaccount.microsoft.com/*"],
+      "css": ["./myaccount.microsoft.com/all.css"]
     }
   ],
   "background": {
