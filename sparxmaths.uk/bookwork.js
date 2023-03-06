@@ -4,6 +4,7 @@
 
 function main() {
     console.log(`EwsgitOS: sparxmaths hooked`)
+    chrome.storage.local.set({ sparxPreviousAnswers: { test: 1 } }, null)
 
     if (!document.getElementById("app-container")) setTimeout(() => main(), 1000)
 
@@ -15,13 +16,12 @@ function main() {
 
     let previousAnswers = {}
 
-    chrome.storage.sync.get("sparxPreviousAnswers", (data) => {
+    chrome.storage.local.get("sparxPreviousAnswers", (data) => {
         if (!data) {
             previousAnswers = {}
-            console.log(previousAnswers)
         } else {
             previousAnswers = data
-            console.log(previousAnswers)
+            console.log("synced: ", previousAnswers)
         }
     })
 
@@ -36,9 +36,12 @@ function main() {
                 setTimeout(() => {
                     if (!document.getElementById(`skill-delivery-submit-button`)) return console.log("unable to detect the submit button")
                     document.getElementById(`skill-delivery-submit-button`).onclick = () => {
-                        questionData.answer = document.querySelectorAll(`.page.answer-only`)[0].innerHTML
-                        previousAnswers[middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")] = document.querySelectorAll(`.page.answer-only`)[0].innerHTML
-                        chrome.storage.set({ sparxPreviousAnswers: previousAnswers }, null)
+                        questionData.answer = document.querySelectorAll(`.answer`)[0].innerHTML
+                        if (document.querySelector(`.answer`)) {
+                            previousAnswers[middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")] = document.querySelectorAll(`.answer`)[0].innerHTML
+                            chrome.storage.local.set({ sparxPreviousAnswers: previousAnswers }, null)
+                            console.log("found purely the answer")
+                        }
                         console.table(previousAnswers)
                     }
                 }, 1000)

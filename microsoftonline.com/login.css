@@ -34,3 +34,11 @@
 #tilesHolder > div.tile-container > div > div.table > div > div.table-cell.text-left.content > div > small {
     padding-right: 0.75rem;
 }
+
+.inner, .sign-in-box {
+    max-width: 48rem !important;
+}
+
+#idBoilerPlateText {
+    display: none !important;
+}

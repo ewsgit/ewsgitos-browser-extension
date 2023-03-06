@@ -29,6 +29,14 @@
       "css": ["./sparxmaths.uk/student.css"]
     },
     {
+      "matches": ["https://auth.sparxmaths.uk/*"],
+      "css": ["./sparxmaths.uk/auth.css"]
+    },
+    {
+      "matches": ["https://*.sparxmaths.com/*"],
+      "js": ["./sparxmaths.com/redirect.js"]
+    },
+    {
       "matches": ["https://twitter.com/*"],
       "css": ["./twitter.com/all.css"]
     },

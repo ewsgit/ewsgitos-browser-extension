@@ -22,13 +22,28 @@
     background-color: transparent !important;
 }
 
+.button-0-2-8 {
+    border: none !important;
+    border-radius: 0.5rem !important;
+    margin-right: -0.5rem !important;
+    margin-left: 0 !important;
+    background-color: transparent !important;
+}
+
+.button-0-2-8:hover {
+    background-color: transparent !important;
+}
+
+.button-0-2-8:active {
+    background-color: transparent !important;
+}
+
 .package-list > div {
     padding: 0.125rem 0;
 }
 
 .package-list {
     margin: 0 !important;
-    max-width: unset !important;
 }
 
 .item-list .dummytaskitem, .item-list .taskitem {

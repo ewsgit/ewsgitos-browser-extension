@@ -2,6 +2,7 @@
   <library name="definitely typed chrome" type="javaScript">
     <properties>
       <option name="frameworkName" value="&lt;Custom&gt;" />
+      <option name="frameworkVersion" value="" />
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$" />
       </sourceFilesUrls>
