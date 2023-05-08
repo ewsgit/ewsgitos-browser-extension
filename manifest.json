@@ -24,9 +24,10 @@
       "css": ["./google.com/all.css"]
     },
     {
-      "matches": ["https://www.sparxmaths.uk/student"],
-      "js": ["./sparxmaths.uk/bookwork.js"],
-      "css": ["./sparxmaths.uk/student.css"]
+      "matches": ["https://www.sparxmaths.uk/student*"],
+      "js": ["sparxmaths.uk/bookwork.js"],
+      "css": ["sparxmaths.uk/student.css"],
+      "run_at": "document_end"
     },
     {
       "matches": ["https://auth.sparxmaths.uk/*"],
@@ -69,10 +70,6 @@
       "css": ["./myaccount.microsoft.com/all.css"]
     }
   ],
-  "background": {
-    "service_worker": "./background.js",
-    "type": "module"
-  },
   "declarative_net_request": {
     "rule_resources": [
       {
