@@ -125,7 +125,7 @@ function main() {
 
         let middle = document.querySelectorAll("#top-bar > div")[0]
 
-        if (!middle) return
+        if (!middle) return console.error("ESOEXT: unable to find bookwork container")
 
         if (document.querySelectorAll(`#skill-delivery-answer-button`)[0]) {
             document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
@@ -139,11 +139,15 @@ function main() {
                                 parsed: parseAnswer(document.querySelectorAll(`.answer`)[0].innerHTML)
                             }
                             chrome.storage.local.set({sparxPreviousAnswers: previousAnswers}, null)
+                        } else {
+                          console.error("ESOEXT: unable to find answer supplied")
                         }
                         console.table(previousAnswers)
                     }
                 }, 1000)
             }
+        } else {
+          console.error("ESOEXT: unable to find skill-answer-delivery-button")
         }
 
         document.querySelectorAll(`#status-bar > div.back-button`)[0].onclick = () => {
