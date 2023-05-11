@@ -3,7 +3,7 @@
 */
 
 function main() {
-    console.log(`EwsgitOS: sparxmaths hooked`)
+    console.log(`EwsgitOS: sparxmaths hooked 🪝`)
 
 //     sample answers
 //     console.log(parseAnswer(`<div class="keyboard-focus-start-point" tabindex="-1"></div>
@@ -123,9 +123,9 @@ function main() {
             if (document.getElementById("wac-popup-123")) document.getElementById("wac-popup-123").remove()
         }
 
-        let middle = document.querySelectorAll("#top-bar > div")[0]
+        let middle = document.querySelectorAll("#top-bar > .middle")[0]
 
-        if (!middle) return console.error("ESOEXT: unable to find bookwork container")
+        if (!middle) return console.error("EOSEXT: unable to find bookwork container")
 
         if (document.querySelectorAll(`#skill-delivery-answer-button`)[0]) {
             document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
@@ -140,14 +140,12 @@ function main() {
                             }
                             chrome.storage.local.set({sparxPreviousAnswers: previousAnswers}, null)
                         } else {
-                          console.error("ESOEXT: unable to find answer supplied")
+                          console.error("EOSEXT: unable to find answer supplied")
                         }
                         console.table(previousAnswers)
                     }
                 }, 1000)
             }
-        } else {
-          console.error("ESOEXT: unable to find skill-answer-delivery-button")
         }
 
         document.querySelectorAll(`#status-bar > div.back-button`)[0].onclick = () => {
