@@ -127,10 +127,28 @@ function main() {
 
         if (!middle) return console.error("EOSEXT: unable to find bookwork container")
 
-        if (document.querySelectorAll(`#skill-delivery-answer-button`)[0]) {
+        if (document.querySelectorAll(`#skill-delivery-answer-button`)?.[0]) {
             document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
                 setTimeout(() => {
-                    if (!document.getElementById(`skill-delivery-submit-button`)) return console.log("unable to detect the submit button")
+                    if (!document.getElementById(`skill-delivery-submit-button`)) {
+				if (!document.getElementById("question-hooked-success-marker")) {
+					let newElem = document.createElement("div")
+					newElem.id = "question-hooked-success-marker"
+					newElem.style.position = "fixed"
+					newElem.style.display = "hidden"
+					newElem.style.right = "0.5rem"
+					newElem.style.top = "0.5rem"
+					newElem.style.width = "2.5rem"
+					newElem.style.height = "2.5rem"
+					newElem.style.backgroundColor = "#ff0000"
+					newElem.style.zIndex = 1000
+					newElem.style.borderRadius = "1rem"
+					document.body.appendChild(newElem)
+				} else {
+					document.getElementById("question-hooked-success-marker").style.display = "block"
+				}
+			return console.log("unable to detect the submit button")
+		    }
                     document.getElementById(`skill-delivery-submit-button`).onclick = () => {
                         questionData.answer = document.querySelectorAll(`.answer`)[0].innerHTML
                         if (document.querySelector(`.answer`)) {
@@ -140,11 +158,29 @@ function main() {
                             }
                             chrome.storage.local.set({sparxPreviousAnswers: previousAnswers}, null)
                         } else {
-                          console.error("EOSEXT: unable to find answer supplied")
-                        }
+                        	console.error("EOSEXT: unable to find answer supplied")
+				if (!document.getElementById("question-hooked-success-marker")) {
+					let newElem = document.createElement("div")
+					newElem.id = "question-hooked-success-marker"
+					newElem.style.position = "fixed"
+					newElem.style.display = "hidden"
+					newElem.style.right = "0.5rem"
+					newElem.style.top = "0.5rem"
+					newElem.style.width = "2.5rem"
+					newElem.style.height = "2.5rem"
+					newElem.style.backgroundColor = "#ff0000"
+					newElem.style.zIndex = 1000
+					newElem.style.borderRadius = "1rem"
+					document.body.appendChild(newElem)
+					setTimeout(() => { document.getElementById("question-hooked-success-marker").style.display = "hidden" }, 1000)
+				} else {
+					document.getElementById("question-hooked-success-marker").style.display = "block"
+					setTimeout(() => { document.getElementById("question-hooked-success-marker").style.display = "hidden" }, 1000)
+				}
+			}
                         console.table(previousAnswers)
                     }
-                }, 1000)
+                }, 1500)
             }
         }
 
