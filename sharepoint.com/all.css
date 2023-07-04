@@ -4,9 +4,9 @@
   > div.minimisedProfile_93c78e54
   > div {
   border-radius: 0.5rem;
-  filter: blur(1rem);
   margin: 0;
   transition: filter 500ms ease-in-out;
+  filter:brightness(0);
 }
 
 #myProfileByCloudDesignBox_93c78e54
@@ -14,7 +14,7 @@
   > div
   > div.minimisedProfile_93c78e54
   > div:active {
-  filter: blur(0rem);
+  filter:brightness(1);
 }
 
 #myProfileByCloudDesignBox_93c78e54
@@ -22,11 +22,12 @@
   > div
   > div.minimisedProfile_93c78e54 {
   border-radius: 1rem;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 0;
   margin-bottom: 0.5rem;
   position: relative;
   border: 0.25rem #565656 solid;
+  z-index: 3;
 }
 
 #myProfileByCloudDesignBox_93c78e54
@@ -125,4 +126,27 @@
 
 #cdb-my-assignments > div.footer_9c6acd98 {
   display: none !important;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedProfile_93c78e54::after {
+	content: "";
+	position: absolute;
+	top: -0.5rem;
+	left: -0.5rem;
+	animation: profilegradient 10s linear forwards infinite;
+	width: calc(100% + 1rem);
+	height: calc(100% + 1rem);
+	background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);;
+	filter: blur(1rem);
+	z-index: -1;
+	border-radius: 50%;
+}
+
+@keyframes profilegradient {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
