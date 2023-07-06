@@ -159,24 +159,23 @@ function main() {
                             chrome.storage.local.set({sparxPreviousAnswers: previousAnswers}, null)
                         } else {
                         	console.error("EOSEXT: unable to find answer supplied")
-				if (!document.getElementById("question-hooked-success-marker")) {
 					let newElem = document.createElement("div")
 					newElem.id = "question-hooked-success-marker"
 					newElem.style.position = "fixed"
 					newElem.style.display = "hidden"
 					newElem.style.right = "0.5rem"
 					newElem.style.top = "0.5rem"
-					newElem.style.width = "2.5rem"
-					newElem.style.height = "2.5rem"
+					newElem.style.width = "calc(100vw-1rem)"
+					newElem.style.height = "7.5rem"
 					newElem.style.backgroundColor = "#ff0000"
 					newElem.style.zIndex = 1000
 					newElem.style.borderRadius = "1rem"
+					newElem.style.color = "#ffffff"
+					newElem.style.fontSize = "2rem"
+					newElem.style.fontWeight = "900"
+					newElem.innerHTML = "Last code not saved!<br>FORCE RELOADING TO FIX THE ISSUE"
 					document.body.appendChild(newElem)
-					setTimeout(() => { document.getElementById("question-hooked-success-marker").style.display = "hidden" }, 1000)
-				} else {
-					document.getElementById("question-hooked-success-marker").style.display = "block"
-					setTimeout(() => { document.getElementById("question-hooked-success-marker").style.display = "hidden" }, 1000)
-				}
+					setTimeout(() => { window.location.reload() }, 3000)
 			}
                         console.table(previousAnswers)
                     }
