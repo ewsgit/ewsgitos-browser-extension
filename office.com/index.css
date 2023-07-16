@@ -14,14 +14,14 @@
 	}
 
 	.ohpAppTheme .ms-bgc-nla, .ohpAppTheme .ms-bgc-d {
-		background-color: var(--colorNeutralBackground2,#fafafa);
+		background-color: var(--colorNeutralBackground1	,#fafafa);
 	}
 
 	#officeHome > div:nth-child(1) > ohp-appbar > ohp-appbar-content > div > div > div > div.___zeg2ds0.f22iagw.f122n59.fsuw20m.f1vx9l62.f540s0x.f1ja72i3 {
-		background-color: var(--colorNeutralBackground3);
-		border-radius: var(--borderRadiusXLarge);
+		background-color: var(--colorNeutralBackground2);
+		border-radius: 0 1rem 1rem 0;
 	}
 
 	.f1ctqxl6 {
-		background-color: var(--colorNeutralBackground2) !important;
+		background-color: var(--colorNeutralBackground5) !important;
 	}
