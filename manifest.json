@@ -12,6 +12,10 @@
       "css": ["./youtube.com/all.css"]
     },
     {
+      "matches": ["https://music.youtube.com/history"],
+      "js": ["./music.youtube.com/history.js"]
+    },
+    {
       "matches": ["https://searx.be/"],
       "css": ["./searx.be/index.css"]
     },
