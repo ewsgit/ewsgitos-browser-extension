@@ -90,7 +90,12 @@ function main() {
     })
 
     new MutationObserver((mutations, observer) => {
+        setTimeout(() => {
+            onMutation()
+        }, 100)
+    }).observe(document.getElementById("app-container"), { subtree: true, childList: true })
 
+    function onMutation() {
         if (document.getElementById("answer-wac-box")) {
             let wacCode = ""
             wacCode = document.querySelector("#answer-wac-box > div > div > div.wac-text-container > div.bookwork-code").innerHTML.replaceAll("Bookwork code: ", "").replaceAll("</span>", "")
@@ -123,9 +128,11 @@ function main() {
             if (document.getElementById("wac-popup-123")) document.getElementById("wac-popup-123").remove()
         }
 
-        let middle = document.querySelectorAll("#top-bar > .middle")[0]
+        let middle = document.querySelectorAll("#top-bar > .middle")?.[0]
 
-        if (!middle) return console.error("EOSEXT: unable to find bookwork container")
+        if (!middle) {
+            return console.log("%cEOSEXT: unable to find bookwork container", "background:yellow;color:white;")
+        }
 
         if (document.querySelectorAll(`#skill-delivery-answer-button`)?.[0]) {
             document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
@@ -206,7 +213,7 @@ function main() {
 
         console.log(questionData)
 
-    }).observe(document.getElementById("app-container"), {subtree: true, childList: true})
+    }
 }
 
 main()

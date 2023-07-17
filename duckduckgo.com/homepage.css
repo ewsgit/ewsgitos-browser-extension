@@ -1,0 +1,41 @@
+#__next > main > article > div.legacy-homepage-variants_hero__t5u43 > div:nth-child(2) > section.legacy-homepage_ctaSection__5siuM,
+#__next > main > article > div.legacy-homepage-variants_hero__t5u43 > div.legacy-homepage-variants_scrollCta__hNjqv.center_root__Uf1xM.center_intrinsic__mk_Ab.center_andText__ejUnC,
+#features {
+    display: none;
+}
+
+#__next > main > article > div.legacy-homepage-variants_hero__t5u43 > div:nth-child(2) > section:first-child {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#__next > main > article > div.legacy-homepage-variants_hero__t5u43 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    overflow: hidden;
+}
+
+@media (min-width: 480px) {
+    #__next > main > article > div.legacy-homepage-variants_hero__t5u43 > header {
+        width: 30rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #__next > main > article > div.legacy-homepage-variants_hero__t5u43 > header > div > button:last-child {
+        margin-left: auto;
+    }
+
+    #searchbox_homepage {
+        width: 30rem;
+    }
+}
