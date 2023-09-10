@@ -70,7 +70,7 @@ function main() {
 // </div>
 // `))
 
-    if (!document.getElementById("app-container")) setTimeout(() => main(), 1000)
+    if (!document.getElementById("root")) setTimeout(() => main(), 1000)
 
     MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
@@ -93,12 +93,14 @@ function main() {
         setTimeout(() => {
             onMutation()
         }, 100)
-    }).observe(document.getElementById("app-container"), { subtree: true, childList: true })
+    }).observe(document.getElementById("root"), {subtree: true, childList: true})
 
     function onMutation() {
-        if (document.getElementById("answer-wac-box")) {
+        if (document.querySelector("#radix-\\:r3h\\: > div._WACContainer_1cxo7_1")) {
             let wacCode = ""
-            wacCode = document.querySelector("#answer-wac-box > div > div > div.wac-text-container > div.bookwork-code").innerHTML.replaceAll("Bookwork code: ", "").replaceAll("</span>", "")
+            wacCode = document.querySelector("#radix-\\:r3h\\: > div._WACContainer_1cxo7_1 > div._Chip_1l3e3_1._Selected_1l3e3_13._Boxy_1l3e3_75._Filled_1l3e3_8._md_1l3e3_84._Bookwork_1cxo7_33").innerHTML.replaceAll("Bookwork ", "")
+
+            console.log("WAC CODE", wacCode)
 
             let popup;
 
@@ -128,88 +130,88 @@ function main() {
             if (document.getElementById("wac-popup-123")) document.getElementById("wac-popup-123").remove()
         }
 
-        let middle = document.querySelectorAll("#top-bar > .middle")?.[0]
-
-        if (!middle) {
-            return console.log("%cEOSEXT: unable to find bookwork container", "background:yellow;color:white;")
+        if (!document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1")?.[0]) {
+            return console.log("%cEOSEXT: unable to find bookwork container", "background:orange;color:white;")
         }
 
         if (document.querySelectorAll(`#skill-delivery-answer-button`)?.[0]) {
             document.querySelectorAll(`#skill-delivery-answer-button`)[0].onclick = () => {
                 setTimeout(() => {
                     if (!document.getElementById(`skill-delivery-submit-button`)) {
-				if (!document.getElementById("question-hooked-success-marker")) {
-					let newElem = document.createElement("div")
-					newElem.id = "question-hooked-success-marker"
-					newElem.style.position = "fixed"
-					newElem.style.display = "hidden"
-					newElem.style.right = "0.5rem"
-					newElem.style.top = "0.5rem"
-					newElem.style.width = "2.5rem"
-					newElem.style.height = "2.5rem"
-					newElem.style.backgroundColor = "#ff0000"
-					newElem.style.zIndex = 1000
-					newElem.style.borderRadius = "1rem"
-					document.body.appendChild(newElem)
-				} else {
-					document.getElementById("question-hooked-success-marker").style.display = "block"
-				}
-			return console.log("unable to detect the submit button")
-		    }
-                    document.getElementById(`skill-delivery-submit-button`).onclick = () => {
-                        questionData.answer = document.querySelectorAll(`.answer`)[0].innerHTML
-                        if (document.querySelector(`.answer`)) {
-                            previousAnswers[middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")] = {
+                        if (!document.getElementById("question-hooked-success-marker")) {
+                            let newElem = document.createElement("div")
+                            newElem.id = "question-hooked-success-marker"
+                            newElem.style.position = "fixed"
+                            newElem.style.display = "hidden"
+                            newElem.style.right = "0.5rem"
+                            newElem.style.top = "0.5rem"
+                            newElem.style.width = "2.5rem"
+                            newElem.style.height = "2.5rem"
+                            newElem.style.backgroundColor = "#ff0000"
+                            newElem.style.zIndex = 1000
+                            newElem.style.borderRadius = "1rem"
+                            document.body.appendChild(newElem)
+                        } else {
+                            document.getElementById("question-hooked-success-marker").style.display = "block"
+                        }
+                        return console.log("unable to detect the submit button")
+                    }
+                    document.getElementById(`#BottomBar > div > div:nth-child(3) > button`).onclick = () => {
+                        questionData.answer = document.querySelectorAll(`#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionWrapper_138c5_59 > div._Question_xv49g_1._QuestionCentered_xv49g_42._QuestionAnswerOnly_xv49g_47`)[0].innerHTML
+                        if (document.querySelector(`#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionWrapper_138c5_59 > div._Question_xv49g_1._QuestionCentered_xv49g_42._QuestionAnswerOnly_xv49g_47`)) {
+                            previousAnswers[document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1 > div:nth-child(1) > div")?.[0]?.innerHTML.replaceAll("Bookwork code: ", "")] = {
                                 // raw: document.querySelectorAll(`.answer`)[0].innerHTML,
-                                parsed: parseAnswer(document.querySelectorAll(`.answer`)[0].innerHTML)
+                                parsed: parseAnswer(document.querySelectorAll(`#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionWrapper_138c5_59`)[0].innerHTML)
                             }
                             chrome.storage.local.set({sparxPreviousAnswers: previousAnswers}, null)
                         } else {
-                        	console.error("EOSEXT: unable to find answer supplied")
-					let newElem = document.createElement("div")
-					newElem.id = "question-hooked-success-marker"
-					newElem.style.position = "fixed"
-					newElem.style.display = "hidden"
-					newElem.style.right = "0.5rem"
-					newElem.style.top = "0.5rem"
-					newElem.style.width = "calc(100vw-1rem)"
-					newElem.style.height = "7.5rem"
-					newElem.style.backgroundColor = "#ff0000"
-					newElem.style.zIndex = 1000
-					newElem.style.borderRadius = "1rem"
-					newElem.style.color = "#ffffff"
-					newElem.style.fontSize = "2rem"
-					newElem.style.fontWeight = "900"
-					newElem.innerHTML = "Last code not saved!<br>FORCE RELOADING TO FIX THE ISSUE"
-					document.body.appendChild(newElem)
-					setTimeout(() => { window.location.reload() }, 3000)
-			}
+                            console.error("EOSEXT: unable to find answer supplied")
+                            let newElem = document.createElement("div")
+                            newElem.id = "question-hooked-success-marker"
+                            newElem.style.position = "fixed"
+                            newElem.style.display = "hidden"
+                            newElem.style.right = "0.5rem"
+                            newElem.style.top = "0.5rem"
+                            newElem.style.width = "calc(100vw-1rem)"
+                            newElem.style.height = "7.5rem"
+                            newElem.style.backgroundColor = "#ff0000"
+                            newElem.style.zIndex = 1000
+                            newElem.style.borderRadius = "1rem"
+                            newElem.style.color = "#ffffff"
+                            newElem.style.fontSize = "2rem"
+                            newElem.style.fontWeight = "900"
+                            newElem.innerHTML = "Last code not saved!<br>FORCE RELOADING TO FIX THE ISSUE"
+                            document.body.appendChild(newElem)
+                            setTimeout(() => {
+                                window.location.reload()
+                            }, 3000)
+                        }
                         console.table(previousAnswers)
                     }
                 }, 1500)
             }
         }
 
-        document.querySelectorAll(`#status-bar > div.back-button`)[0].onclick = () => {
+        document.querySelectorAll(`#root > div._TopBanner_g7mut_1 > div._BannerLeft_g7mut_20 > div > a`)[0].onclick = () => {
             questionData = {
                 bookworkCode: "", question: "", answer: ""
             }
         }
 
-        if (middle?.children?.[0]?.innerHTML?.replaceAll("<span>Bookwork code: ", "")?.replaceAll("</span>", "") === questionData.bookworkCode) return
+        if (document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1 > div:nth-child(1) > div")?.[0]?.innerHTML?.replaceAll("<span>Bookwork code: ", "")?.replaceAll("</span>", "") === questionData.bookworkCode) return
 
-        questionData.bookworkCode = middle.children[0].innerHTML.replaceAll("<span>Bookwork code: ", "").replaceAll("</span>", "")
+        questionData.bookworkCode = document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1 > div:nth-child(1) > div")?.[0]?.innerHTML.replaceAll("Bookwork code: ", "")
 
-        middle.children[1].innerHTML = `<img class="calculator-image" src="./img/calculator_allowed_scaled.svg" alt="Calculator Allowed">
-                                          <span class="calculator-text">
-                                            <span>Calculator</span>
-                                            <span>
-                                                <strong>allowed</strong>
-                                            </span>
-                                          </span>
-                                        </div>`
+        if (document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1 > div._CalculatorInfoContainer_9pd0g_9 > div._Sm_tqgyz_21")[0].innerHTML !== `<p>Calculator allowed</p>`) {
+            document.querySelectorAll("#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionInfo_9pd0g_1 > div._CalculatorInfoContainer_9pd0g_9")[0].innerHTML = `
+            <img class="_CalculatorIcon_9pd0g_21" src="https://static.sparxhomework.uk/sw2/fb8e95f68f418f79fa6fc488d564f040918204da/assets/CalculatorAllowed-7c873ab4.svg">
+            <div class="_Sm_tqgyz_21">
+                <p>Calculator allowed</p>
+            </div>
+            `
+        }
 
-        questionData.question = document.querySelectorAll(`#app-container > div.screen > div.main-view > div > div > div > div.skill-delivery-view > div.view-body > div > div > div > div > div`)[0]
+        questionData.question = document.querySelectorAll(`#root > div._LQDContainer_2l6st_1 > div._TransitionContainer_jihjj_1 > div > div > div._QuestionContainer_138c5_1._QuestionScrollableContent_138c5_27 > div._QuestionWrapper_138c5_59 > div._Question_xv49g_1._QuestionCentered_xv49g_42._QuestionAnswerOnly_xv49g_47`)[0]
 
         console.log(questionData)
 
