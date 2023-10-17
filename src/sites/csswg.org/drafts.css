@@ -1,0 +1,32 @@
+body {
+  --bg: #222;
+  --def-bg: #111;
+  --defrow-border: #333;
+}
+
+.mdn-anno > .mdn-anno-btn > span {
+  background-color: transparent !important;
+}
+
+* {
+  font-family: roboto, sans-serif !important;
+}
+
+.note,
+.example,
+.def,
+.advisement,
+.wpt-tests-block {
+  border-radius: 0.5rem;
+}
+
+.wpt-tests-block:not([open]) > summary {
+  padding: 0.5rem !important;
+  background-color: #333 !important;
+  border-radius: 0.5rem;
+  color: #999;
+}
+
+.wpt-tests-block:not([open]) {
+  min-height: 2rem;
+}

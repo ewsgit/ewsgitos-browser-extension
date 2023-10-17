@@ -1,0 +1,1 @@
+console.log("EWSGIT-OS Browser Extension Loaded!")

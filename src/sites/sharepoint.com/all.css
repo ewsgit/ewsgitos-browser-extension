@@ -1,0 +1,166 @@
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54
+  > div {
+  border-radius: 500rem;
+  margin: 0;
+  transition: filter 250ms ease-in-out;
+  filter:brightness(0.2);
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54
+  > div:active {
+  transition: filter 1000ms ease-in-out;
+  filter:brightness(1);
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54 {
+  border-radius: 1rem;
+  /*overflow: hidden;*/
+  padding: 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54::before {
+  content: "no peaking";
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.125rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+#myProfileByCloudDesignBox_93c78e54
+  > div
+  > div
+  > div.minimisedProfile_93c78e54:active::before {
+  opacity: 0 !important;
+}
+
+#O365_MainLink_Help_container {
+  display: none !important;
+}
+
+#O365_MainLink_MePhoto > div > div > div > div > div.nvEhuDKzSmREBsqaIaOhu > img {
+  display: none !important;
+}
+
+#mectrl_headerPicture {
+  background-image: url("https://api.macosicons.com/uploads/filters_24px_ef8beca8c2.svg") !important;
+}
+
+#mectrl_currentAccount_picture,
+.mectrl_profilepic {
+  border-radius: 1rem !important;
+}
+
+#mectrl_currentAccount_picture > div {
+  filter: blur(0.75rem);
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div {
+  border-radius: 1rem;
+  padding-bottom: 0 !important;
+}
+
+#row_c5fb267a > div > div > div {
+  border-radius: 1rem;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedWelcome_93c78e54 {
+  margin: 0 !important;
+}
+
+.myProfileByCloudDesignBox_93c78e54 .minimisedmode_93c78e54 .minimisedWelcome_93c78e54 {
+  max-width: unset !important;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedWelcome_93c78e54 > div > div:nth-child(2) > div {
+  padding-top: 0 !important;
+  padding: 0.5rem;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedWelcome_93c78e54 > div > div:nth-child(1) > div {
+  padding-top: 0 !important;
+  padding: 0.5rem;
+  padding-bottom: 0.125rem !important;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedWelcome_93c78e54 > div > div:nth-child(2) > div > a {
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: none !important;
+  transition: all 125ms ease-in-out;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedWelcome_93c78e54 > div > div:nth-child(1) > div > a {
+  border-radius: 0.5rem 0.5rem 0 0;
+  border: none !important;
+  transition: all 125ms ease-in-out;
+}
+
+#\37 d76f3b1-1aa6-4be4-8861-f57eb901f804 > div > div > div > div > div {
+  margin: 0 !important;
+  max-width: unset !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+#cdb-my-assignments > div.footer_9c6acd98 {
+  display: none !important;
+}
+
+#myProfileByCloudDesignBox_93c78e54 > div > div > div.minimisedProfile_93c78e54::after {
+	content: "";
+	position: absolute;
+	top: -0.5rem;
+	left: -0.5rem;
+	animation: profilegradient 5s linear forwards infinite;
+	width: calc(100% + 1rem);
+	height: calc(100% + 1rem);
+	background: linear-gradient(
+			90deg, 
+			rgba(255,0,0,1) 0%,
+			rgba(255,154,0,1) 10%,
+			rgba(208,222,33,1) 20%,
+			rgba(79,220,74,1) 30%,
+			rgba(63,218,216,1) 40%,
+			rgba(47,201,226,1) 50%,
+			rgba(28,127,238,1) 60%,
+			rgba(95,21,242,1) 70%,
+			rgba(186,12,248,1) 80%,
+			rgba(251,7,217,1) 90%,
+			rgba(255,0,0,1) 100%
+		    );
+	filter: blur(1rem);
+	z-index: -1;
+	border-radius: 50%;
+}
+
+@keyframes profilegradient {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

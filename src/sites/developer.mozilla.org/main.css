@@ -1,0 +1,4 @@
+#root > div > div.main-wrapper > div > div,
+#root > div > div.top-banner.visible {
+  display: none;
+}

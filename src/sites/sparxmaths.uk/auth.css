@@ -1,0 +1,4 @@
+body > div > footer {
+    display: none;
+    overflow: hidden;
+}

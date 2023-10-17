@@ -1,7 +1,7 @@
 {
   "name": "EwsgitOS Web Extension",
   "description": "The EwsgitOS website customizations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 3,
   "author": "Ewsgit",
   "permissions": ["activeTab", "storage", "scripting", "declarativeNetRequest"],
@@ -9,49 +9,50 @@
   "content_scripts": [
     {
       "matches": [ "https://*.youtube.com/*" ],
-      "css": [ "./youtube.com/all.css" ]
+      "css": [ "./src/sites/youtube.com/all.css" ],
+      "js": ["./src/sites/youtube.com/youtube.js"]
     },
     {
-      "matches": ["https://music.youtube.com/history"],
-      "js": [ "./music.youtube.com/history.js" ]
+      "matches": [ "https://music.youtube.com/history" ],
+      "js": [ "./src/sites/music.youtube.com/history.js" ]
     },
     {
       "matches": [ "https://searx.be/" ],
-      "css": [ "./searx.be/index.css" ]
+      "css": [ "./src/sites/searx.be/index.css" ]
     },
     {
       "matches": [ "https://searx.be/search" ],
-      "css": [ "./searx.be/search.css" ]
+      "css": [ "./src/sites/searx.be/search.css" ]
     },
     {
       "matches": [ "https://www.google.com/*", "https://www.google.co.uk/*" ],
-      "css": [ "./google.com/all.css" ]
+      "css": [ "./src/sites/google.com/all.css" ]
     },
     {
       "matches": [ "https://www.sparxmaths.uk/student*" ],
-      "js": [ "sparxmaths.uk/bookwork.js" ],
-      "css": [ "sparxmaths.uk/student.css" ],
+      "js": [ "./src/sites/sparxmaths.uk/bookwork.js" ],
+      "css": [ "./src/sites/sparxmaths.uk/student.css" ],
       "run_at": "document_end"
     },
     {
       "matches": [ "https://auth.sparxmaths.uk/*" ],
-      "css": [ "./sparxmaths.uk/auth.css" ]
+      "css": [ "./src/sites/sparxmaths.uk/auth.css" ]
     },
     {
       "matches": [ "https://*.sparxmaths.com/*" ],
-      "js": [ "./sparxmaths.com/redirect.js" ]
+      "js": [ "./src/sites/sparxmaths.com/redirect.js" ]
     },
     {
       "matches": [ "https://twitter.com/*" ],
-      "css": [ "./twitter.com/all.css" ]
+      "css": [ "./src/sites/twitter.com/all.css" ]
     },
     {
       "matches": [ "https://manchesterworld.uk/*" ],
-      "css": [ "./manchesterworld.uk/all.css" ]
+      "css": [ "./src/sites/manchesterworld.uk/all.css" ]
     },
     {
       "matches": [ "https://drafts.csswg.org/*" ],
-      "css": [ "./csswg.org/drafts.css" ]
+      "css": [ "./src/sites/csswg.org/drafts.css" ]
     },
     {
       "matches": [ "https://*.sharepoint.com/*" ],
@@ -80,6 +81,18 @@
     {
       "matches": [ "https://slopegame.io/" ],
       "js": [ "./slopegame.io/redirect.js" ]
+    },
+    {
+      "matches": [ "https://developer.mozilla.org/*" ],
+      "css": [ "./developer.mozilla.org/main.css" ]
+    },
+    {
+      "matches": [ "https://*.bing.com/*" ],
+      "css": [ "./bing.com/all.css" ]
+    },
+    {
+      "matches": [ "https://localhost:6543/block" ],
+      "css": [ "./siteblocker-localhost6543/block.css" ]
     }
   ],
   "declarative_net_request": {
@@ -93,7 +106,15 @@
         "id": "youtube-com",
         "enabled": true,
         "path": "youtube.com/block_rules.json"
+      },
+      {
+        "id": "siteblocker-localhost6543",
+        "enabled": true,
+        "path": "siteblocker-localhost6543/block_rules.json"
       }
     ]
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }

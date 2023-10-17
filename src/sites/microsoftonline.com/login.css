@@ -1,0 +1,44 @@
+#lightbox {
+    border-radius: 1rem !important;
+    padding: 2.5rem 2.5rem 0.5rem;
+    min-height: unset !important;
+}
+
+.row.tile .table {
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.row.tile .tile-menu-float {
+    top: 50% !important;
+    position: absolute !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+}
+
+.row.tile {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    border-radius: 0.5rem !important;
+    transition: 100ms ease-in-out all;
+}
+
+#footerLinks {
+    padding-left: 0.5rem;
+}
+
+#footerLinks::before {
+    content: "Extended by EwsgitOS";
+}
+
+#tilesHolder > div.tile-container > div > div.table > div > div.table-cell.text-left.content > div > small {
+    padding-right: 0.75rem;
+}
+
+.inner, .sign-in-box {
+    max-width: 48rem !important;
+}
+
+#idBoilerPlateText {
+    display: none !important;
+}

@@ -1,0 +1,7 @@
+body > div.tp-modal {
+  display: none;
+}
+
+body > div.tp-backdrop.tp-active {
+  display: none;
+}

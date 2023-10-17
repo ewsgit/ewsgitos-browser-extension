@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"priority": 1,
+		"action": {
+			"type": "block",
+			"redirect": {
+				"transform": {
+					"scheme": "https",
+					"host": "example.com"
+				}
+			}
+		},
+		"condition": {
+			"urlFilter": "https://*.*.*/*/loader.js*"
+		}
+	},
+	{
+		"id": 2,
+		"priority": 1,
+		"action": {
+			"type": "block",
+			"redirect": {
+				"transform": {
+					"scheme": "https",
+					"host": "example.com"
+				}
+			}
+		},
+		"condition": {
+			"urlFilter": "https://*.*.*/*/inject.js*"
+		}
+	},
+	{
+		"id": 3,
+		"priority": 1,
+		"action": {
+			"type": "block",
+			"redirect": {
+				"transform": {
+					"scheme": "https",
+					"host": "example.com"
+				}
+			}
+		},
+		"condition": {
+			"urlFilter": "https://*.*.*/*/youtube.js*"
+		}
+	}
+]
