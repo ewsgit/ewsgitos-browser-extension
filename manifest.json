@@ -56,43 +56,43 @@
     },
     {
       "matches": [ "https://*.sharepoint.com/*" ],
-      "css": [ "./sharepoint.com/all.css" ]
+      "css": [ "./src/sites/sharepoint.com/all.css" ]
     },
     {
       "matches": [ "https://*.twitch.tv/*" ],
-      "css": [ "./twitch.tv/all.css" ]
+      "css": [ "./src/sites/twitch.tv/all.css" ]
     },
     {
       "matches": [ "https://*.office.com/*" ],
-      "css": [ "./office.com/index.css" ]
+      "css": [ "./src/sites/office.com/index.css" ]
     },
     {
       "matches": [ "https://login.microsoftonline.com/*" ],
-      "css": [ "./microsoftonline.com/login.css" ]
+      "css": [ "./src/sites/microsoftonline.com/login.css" ]
     },
     {
       "matches": [ "https://myaccount.microsoft.com/*" ],
-      "css": [ "./myaccount.microsoft.com/all.css" ]
+      "css": [ "./src/sites/myaccount.microsoft.com/all.css" ]
     },
     {
       "matches": [ "https://duckduckgo.com/" ],
-      "css": [ "./duckduckgo.com/homepage.css" ]
+      "css": [ "./src/sites/duckduckgo.com/homepage.css" ]
     },
     {
       "matches": [ "https://slopegame.io/" ],
-      "js": [ "./slopegame.io/redirect.js" ]
+      "js": [ "./src/sites/slopegame.io/redirect.js" ]
     },
     {
       "matches": [ "https://developer.mozilla.org/*" ],
-      "css": [ "./developer.mozilla.org/main.css" ]
+      "css": [ "./src/sites/developer.mozilla.org/main.css" ]
     },
     {
       "matches": [ "https://*.bing.com/*" ],
-      "css": [ "./bing.com/all.css" ]
+      "css": [ "./src/sites/bing.com/all.css" ]
     },
     {
       "matches": [ "https://localhost:6543/block" ],
-      "css": [ "./siteblocker-localhost6543/block.css" ]
+      "css": [ "./src/sites/siteblocker-localhost6543/block.css" ]
     }
   ],
   "declarative_net_request": {
@@ -100,17 +100,17 @@
       {
         "id": "depressing-sparxmath",
         "enabled": true,
-        "path": "sparxmaths.uk/block_rules.json"
+        "path": "./src/sites/sparxmaths.uk/block_rules.json"
       },
       {
         "id": "youtube-com",
         "enabled": true,
-        "path": "youtube.com/block_rules.json"
+        "path": "./src/sites/youtube.com/block_rules.json"
       },
       {
         "id": "siteblocker-localhost6543",
         "enabled": true,
-        "path": "siteblocker-localhost6543/block_rules.json"
+        "path": "./src/sites/siteblocker-localhost6543/block_rules.json"
       }
     ]
   },
